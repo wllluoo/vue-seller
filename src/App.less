@@ -1,0 +1,34 @@
+@import './common/style/mixin.less';
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  .router-link-active {
+    color:  #ff4d4d!important;
+  }
+  .border-1px(rgba(7, 17, 27, 0.1));
+
+
+  // 底部
+  .tab {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    justify-content: space-around;
+    .tab-item {
+      flex: 1;
+      text-align: center;
+      a {
+        display: block;
+        color: rgb(77, 85, 93);
+        font-size: 14px;
+      }
+    }
+    
+  }
+}
