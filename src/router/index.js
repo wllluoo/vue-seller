@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from 'components/index/index.vue'
-import classify from 'components/classify/classify.vue'
-import seller from 'components/seller/seller.vue'
+import essay from 'components/essay/essay.vue'
+import market from 'components/market/market.vue'
 import personal from 'components/personal/personal.vue'
 
 Vue.use(Router)
@@ -14,12 +14,12 @@ export default new Router({
       component: index
     },
     {
-      path: '/classify',
-      component: classify
+      path: '/essay',
+      component: essay
     },
     {
-      path: '/seller',
-      component: seller
+      path: '/market',
+      component: market
     },
     {
       path: '/personal',

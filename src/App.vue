@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <!-- <v-header :seller="seller" /> -->
-
+    <!-- <v-search :placeholderWord="placeholderWord" /> -->
     <div class="tab border-1px">
-        <div class="tab-item"><router-link to="/index">首页</router-link></div>
-        <div class="tab-item"><router-link to="/classify">分类</router-link></div>
-        <div class="tab-item"><router-link to="/seller">购物车</router-link></div>
-        <div class="tab-item"><router-link to="/personal">我的</router-link></div>
+        <div class="tab-item" v-for="item in lists">
+            <router-link :to="item.url">
+                <div class="tab-item-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48"><path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z"/></svg>
+                    <span>{{item.name}}</span>
+                </div>
+            </router-link>
+        </div>
     </div>
     <router-view/>
   </div>
@@ -14,17 +18,37 @@
 
 <script>
 import header from './components/header/header';
+import search from './components/search/search';
 
 const ERR_OK = 0;
 
 export default {
     name: 'App',
     components: {
-      'vHeader': header
+      'vHeader': header,
+      'vSearch': search
     },
     data() {
       return {
         seller: {},
+        placeholderWord: '搜索商品',
+        lists: [{
+          name: '首页',
+          url: '/index',
+          id: 0,
+        }, {
+          name: '帖子',
+          url: '/essay',
+          id: 1,
+        }, {
+          name: '跳蚤市场',
+          url: '/market',
+          id: 2,
+        }, {
+          name: '我的',
+          url: '/personal',
+          id: 3,
+        }]
       }
     },
     created() {

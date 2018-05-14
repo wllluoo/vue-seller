@@ -5,7 +5,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: .6rem;
   .router-link-active {
     color:  #ff4d4d!important;
   }
@@ -16,17 +16,29 @@
   .tab {
     display: flex;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+    // height: 40px;
+    line-height: .4rem;
     text-align: center;
     justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #BDBDBD;
+    padding: 3px 0;
     .tab-item {
       flex: 1;
       text-align: center;
       a {
         display: block;
         color: rgb(77, 85, 93);
-        font-size: 14px;
+        font-size: .14rem;
+      }
+    }
+    .tab-item-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        line-height: .2rem;
       }
     }
     

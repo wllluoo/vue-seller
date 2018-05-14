@@ -1,5 +1,5 @@
 {
-  "name": "sell",
+  "name": "ChooseMajor",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "钟佩佩 <m_norah@sina.cn>",
@@ -13,6 +13,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "dns": "^0.2.2",
+    "fetch": "^1.1.0",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "stylus": "^0.54.5",

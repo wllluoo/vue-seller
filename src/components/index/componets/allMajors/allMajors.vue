@@ -10,6 +10,7 @@
 
 
 <script>
+    import fetch from '@/fetch'
     export default {
         data() {
             return {
@@ -27,7 +28,17 @@
             return this.seller.minPrice.toFixed(2)
           }
         },
+        created() {
+
+        },
         mounted() {
+          fetch({
+            url: '/getAllMajors',
+            method: 'GET',
+            success: (data) => {
+                console.log('data', data);
+            }
+          })
           console.log('111', this.seller)
         }
     }

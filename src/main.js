@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import vueresource from 'vue-resource'
+import init from './assets/init'
 
 Vue.use(vueresource)
+Vue.use(init.start)
 
 Vue.config.productionTip = false
 

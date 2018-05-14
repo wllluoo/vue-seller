@@ -5,31 +5,20 @@
       <div class="search"></div>
       <div class="roll"></div>
       <div class="classify">
-          <div class="classify-item">
-            <img src="https://dummyimage.com/88x88" />
-            <span>优选</span>
-          </div>
-          <div class="classify-item">
-            <img src="https://dummyimage.com/88x88" />
-            <span>热销</span>
-          </div>
-          <div class="classify-item">
-            <img src="https://dummyimage.com/88x88" />
-            <span>分类</span>
-          </div>
-          <div class="classify-item">
-            <img src="https://dummyimage.com/88x88" />
-            <span>优惠</span>
-          </div>
+          <allMajors />
       </div>
     </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
+import allMajors from './componets/allMajors/allMajors';
+
   export default {
     data () {
       return {}
-
+    },
+    components: {
+      allMajors, 
     }
   }
 </script>
