@@ -5,7 +5,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: .6rem;
+  // margin-top: .6rem;
+  height: 100%;
   .router-link-active {
     color:  #ff4d4d!important;
   }
@@ -20,17 +21,18 @@
     line-height: .4rem;
     text-align: center;
     justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    border-top: 1px solid #BDBDBD;
-    padding: 3px 0;
+    // position: fixed;
+    top: 0;
+    padding: .1rem 0;
+    // margin-top: 0.1rem;
+    border-bottom: .001rem solid #bbb;
     .tab-item {
       flex: 1;
       text-align: center;
       a {
         display: block;
         color: rgb(77, 85, 93);
-        font-size: .14rem;
+        font-size: .12rem;
       }
     }
     .tab-item-block {

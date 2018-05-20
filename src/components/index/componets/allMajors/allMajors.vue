@@ -1,26 +1,25 @@
 <template>
-  <div>
-    <div class="header">
-      <div class="content-wrapper">
-        电商商城
-      </div>
+    <div class="content-wrapper">
+        <div class="categoryBlock" v-for="item in allMajors">
+            <div class="category">{{item.categoryName}}</div>
+        </div>
     </div>
-  </div>
 </template>
 
 
 <script>
     import fetch from '@/fetch'
+    import majorBlock from './components/majorBlock'
     export default {
         data() {
             return {
-                
+                allMajors: []
             }
         },
         props: {
-            seller: {
-              type: Object,
-            }
+            // allMajors: {
+            //   type: Object,
+            // }
         },
         computed: {
           blabla: function() {
@@ -33,17 +32,17 @@
         },
         mounted() {
           fetch({
-            url: '/getAllMajors',
+            url: '/75610',
             method: 'GET',
             success: (data) => {
                 console.log('data', data);
+                this.allMajors = data.items || [];
             }
           })
-          console.log('111', this.seller)
         }
     }
 </script>
 
 <style lang="less">
-
+@import './allMajors.less';
 </style>

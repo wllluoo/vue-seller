@@ -1,5 +1,5 @@
 
-import fetch from 'fetch';
+import fetch from 'isomorphic-fetch';
 import config from './config';
 import { queryToUrl } from '@/utils';
 
@@ -20,8 +20,8 @@ function checkStatus(response) {
 function parseJSON(response) {
   return response.json()
 }
-const action = ({ url, method = 'GET', data, Authorization, completeUrl }) => {
-  if (!method || (!url && !completeUrl)) throw new TypeError('请传入正确的method与url');
+const action = ({ url, method = 'GET', data, Authorization, completeUrl, success }) => {
+  if (!method || (!url && !completeUrl)) throw new TypeError('请传入正确的method与url')
   let queryUrl = url || completeUrl;
   if (method === 'GET') {
     queryUrl = queryToUrl(url || completeUrl, data);
@@ -44,6 +44,9 @@ const action = ({ url, method = 'GET', data, Authorization, completeUrl }) => {
   )
     .then(checkStatus)
     .then(parseJSON)
+    .then(response => {
+      if (success) success(response)
+    })
 }
 
-export default action;
+export default action

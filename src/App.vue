@@ -6,7 +6,6 @@
         <div class="tab-item" v-for="item in lists">
             <router-link :to="item.url">
                 <div class="tab-item-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48"><path d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z"/></svg>
                     <span>{{item.name}}</span>
                 </div>
             </router-link>
@@ -52,17 +51,17 @@ export default {
       }
     },
     created() {
-      this.$http.get('/api/seller').then(response => {
-        // get body data
-        response = response.body;
-        if (response.errno === ERR_OK) {
-          console.log(response.data)
-            this.seller = response.data;
-        }
+      // this.$http.get('/api/seller').then(response => {
+      //   // get body data
+      //   response = response.body;
+      //   if (response.errno === ERR_OK) {
+      //     console.log(response.data)
+      //       this.seller = response.data;
+      //   }
         
-      }, response => {
-        // error callback
-      });
+      // }, response => {
+      //   // error callback
+      // });
     }
 }
 </script>
