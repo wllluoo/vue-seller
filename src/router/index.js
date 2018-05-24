@@ -4,6 +4,7 @@ import index from 'components/index/index.vue'
 import essay from 'components/essay/essay.vue'
 import market from 'components/market/market.vue'
 import personal from 'components/personal/personal.vue'
+import allSubject from 'components/allSubject/allSubject.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,10 @@ export default new Router({
     {
       path: '/personal',
       component: personal
+    },
+    {
+      path: '/allsubject', // 所有学科
+      component: allSubject
     }
   ]
 })

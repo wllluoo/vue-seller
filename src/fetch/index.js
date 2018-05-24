@@ -36,11 +36,13 @@ const action = ({ url, method = 'GET', data, Authorization, completeUrl, success
 
   return fetch(
     apiUrl,
-    {
+    Object.assign({}, {
       headers,
-      method,
+      method
+    },
+    method === 'POST' && {
       body: JSON.stringify(data)
-    }
+    })
   )
     .then(checkStatus)
     .then(parseJSON)

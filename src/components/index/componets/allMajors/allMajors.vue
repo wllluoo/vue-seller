@@ -1,7 +1,7 @@
 <template>
     <div class="content-wrapper">
         <div class="categoryBlock" v-for="item in allMajors">
-            <div class="category">{{item.categoryName}}</div>
+            <div class="category" @click="showAllSubject(item.id)">{{item.categoryName}}</div>
         </div>
     </div>
 </template>
@@ -9,7 +9,7 @@
 
 <script>
     import fetch from '@/fetch'
-    import majorBlock from './components/majorBlock'
+    // import majorBlock from './components/majorBlock'
     export default {
         data() {
             return {
@@ -20,6 +20,11 @@
             // allMajors: {
             //   type: Object,
             // }
+        },
+        methods: {
+          showAllSubject(id) {
+              this.$router.push({ path: 'allsubject', query: { id } })
+          }
         },
         computed: {
           blabla: function() {
@@ -35,7 +40,7 @@
             url: '/75610',
             method: 'GET',
             success: (data) => {
-                console.log('data', data);
+                // console.log('data', data);
                 this.allMajors = data.items || [];
             }
           })
