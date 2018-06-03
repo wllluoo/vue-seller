@@ -1,15 +1,18 @@
+@import '../../../../common/style/base.less';
+
+
 .content-wrapper {
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   .categoryBlock{
-    width: calc(20% - .02rem);
+    width: calc(21% - .02rem);
     word-break: keep-all;
-    border: .01rem solid #bbb;
-    border-radius: .05rem;
+    border: .01rem solid white;
+    // border-radius: .05rem;
     height: 1.4rem;
-    margin: .1rem .28rem;
+    margin: 5% 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +25,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: @lightBg;
+      color: @word;
     }
   }
 }

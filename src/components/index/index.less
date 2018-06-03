@@ -1,10 +1,13 @@
+@import '../../common/style/base.less';
+
 // 头部
 .top-warpper {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 90%;
+  margin: 0 auto;
   .classify{
     width: 100%;
   }
@@ -15,6 +18,18 @@
       height: 15%;
       margin-top: 10%;
       padding: .7rem 0 .28rem 0;
+      color: @word;
+    }
+    .main-test{
+      .main-test-Button {
+        width: 4rem;
+        height: .4rem;
+        border-radius: 50px;
+        background: @word;
+        color: white;
+        font-size: .12rem;
+        border-color: #D1E3E6;
+      }
     }
   }
 }

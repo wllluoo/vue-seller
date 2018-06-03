@@ -9,7 +9,7 @@
     </div>
     <div class="subject-bottom">
       <div class="subject-bottom-future">前景</div>
-      <div class="subject-bottom-comment">评论</div>
+      <div class="subject-bottom-comment" @click="showComment()">评论</div>
     </div>
   </div>
 </template>
@@ -19,6 +19,10 @@
     props: ['data'],
     data () {
       return {
+      }
+    },
+    methods: {
+      showComment(id) {
       }
     },
     components: {

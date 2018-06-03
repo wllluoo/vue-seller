@@ -16,6 +16,7 @@
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "dns": "^0.2.2",
     "fetch": "^1.1.0",
+    "isomorphic-fetch": "^2.2.1",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "stylus": "^0.54.5",

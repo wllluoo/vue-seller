@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <v-header :seller="seller" /> -->
     <!-- <v-search :placeholderWord="placeholderWord" /> -->
-    <div class="tab border-1px">
+    <div class="tab">
         <div class="tab-item" v-for="item in lists">
             <router-link :to="item.url">
                 <div class="tab-item-block">
